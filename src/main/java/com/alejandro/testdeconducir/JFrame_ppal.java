@@ -194,7 +194,6 @@ public class JFrame_ppal extends javax.swing.JFrame {
         jFramePreguntas abrir = new jFramePreguntas();
         abrir.setVisible(true);
         this.setVisible(false);
-
     }//GEN-LAST:event_btnCocheActionPerformed
 
     /**
