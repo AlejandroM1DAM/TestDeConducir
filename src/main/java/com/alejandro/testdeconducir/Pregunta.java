@@ -7,8 +7,6 @@ package com.alejandro.testdeconducir;
  */
 
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 
 /**
  *
@@ -23,8 +21,15 @@ public class Pregunta {
     public Pregunta() {
         
     }
+    public Pregunta(String pregunta,String resp1,String resp2,String resp3){
+        this.pregunta = pregunta;
+        this.resp1 = resp1;
+        this.resp2=resp2;
+        this.resp3 = resp3;
+    }
     
     public String getPregunta() {
+       
         return pregunta;
     }
     
@@ -43,6 +48,8 @@ public class Pregunta {
     public String[] getRespuestas() {
         return respuestas;
     }
+    
+    
     //*********************************************************************//
     public void setPregunta() {
         
@@ -61,22 +68,5 @@ public class Pregunta {
     }
     
     
-    public void next() {
     
-        //BufferedReader br = new BufferedReader(new FileReader());
-        try {
-            // create object mapper instance
-            ObjectMapper mapper = new ObjectMapper();
-
-            // convert JSON array to list of books
-            List<Book> books = Arrays.asList(mapper.readValue(Paths.get("books.json").toFile(), Book[].class));
-
-            // print books
-            books.forEach(System.out::println);
-
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-    
-    }
 }
