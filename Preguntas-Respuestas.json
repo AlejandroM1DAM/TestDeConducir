@@ -3,6 +3,159 @@
 "pregunta":"¿Qué indica un panel de color verde a la entrada de un puerto de montaña?",
 "resp1":"El puerto se encuentra cerrado",
 "resp2":"Está prohibida la circulación de vehículos articulados",
-"resp3":"C) El puerto es transitable"
+"resp3":"El puerto es transitable",
+"respCorrecta":"El puerto es transitable"
+},
+
+{
+"pregunta":"En un vehículo de más de 5 metros, destinado al transporte de mercancías, una carga de longitud indivisible puede sobresalir...",
+"resp1":"2 metros por la parte delantera y 3 por la trasera.",
+"resp2":"El 15% de la longitud del vehículo por delante y por detrás.",
+"resp3":"3 metros por la parte delantera y 2 por la trasera.",
+"respCorrecta":"El 15% de la longitud del vehículo por delante y por detrás."
+},
+
+{
+"pregunta":"¿Debemos facilitar y ceder el paso a los vehículos que se aproximen por nuestra derecha si no existe señalización de prioridad de paso?",
+"resp1":"No, porque los vehículos que circulan por la vía principal siempre tendrán prioridad.",
+"resp2":"Sí, de forma obligatoria.",
+"resp3":"Sí, pero solamente a los autobuses.",
+"respCorrecta":"Sí, de forma obligatoria."
+},
+
+{
+"pregunta":"¿Qué sector de peatones obliga al conductor a extremar las precauciones?",
+"resp1":"Las amas de casa con bolsas en la mano",
+"resp2":"Los que realizan trabajos en la vía",
+"resp3":"Los jóvenes que van a pie",
+"respCorrecta":"Los que realizan trabajos en la vía"
+},
+
+{
+"pregunta":"En el cruce, ¿qué debe hacer el vehículo articulado situado en el carril derecho?",
+"resp1":"Puede ir hacia cualquier dirección indicada por las flechas de la calzada.",
+"resp2":"Girar a la derecha.",
+"resp3":"Puede seguir recto o girar a la derecha.",
+"respCorrecta":"Girar a la derecha."
+},
+
+{
+"pregunta":"¿Qué permiso de conducción será necesario para conducir automóviles destinados al transporte de personas con más de nueve asientos y menos de diecisiete (minibús por ejemplo)?",
+"resp1":"C1+E",
+"resp2":"D1",
+"resp3":"C",
+"respCorrecta":"D1"
+},
+
+{
+"pregunta":" ¿Cada cuántos kilómetros aproximadamente debe un conductor realizar una parada para descansar?",
+"resp1":"Cada 1000 o 2000 kilómetros",
+"resp2":"Cada 200 o 300 kilómetros",
+"resp3":"Cada 400 o 500 kilómetros",
+"respCorrecta":"Cada 200 o 300 kilómetros"
+},
+
+{
+"pregunta":"¿Cuándo se levantará la inmovilización ordenada por un agente de la autoridad?",
+"resp1":"Tan pronto desaparezcan las causas que la motivaron",
+"resp2":"Cuando pasen al menos 5 días desde la inmovilización",
+"resp3":"Cuando el Agente de parte a las autoridades competentes",
+"respCorrecta":"Tan pronto desaparezcan las causas que la motivaron"
+},
+
+{
+"pregunta":"Para el buen mantenimiento del sistema de frenos, ¿qué se debe hacer?",
+"resp1":"Pisar a fondo el pedal de freno para comprobar su eficacia.",
+"resp2":"Engrasar los discos periódicamente.",
+"resp3":"Revisar el nivel del líquido de frenos.",
+"respCorrecta":"Revisar el nivel del líquido de frenos."
+},
+
+{
+"pregunta":"¿Qué vehículo tendrá preferencia en un tramo estrecho de gran pendiente en el que sea difícil el paso simultáneo de ambos?",
+"resp1":"El vehículo más estrecho",
+"resp2":"El que circule en sentido ascendente",
+"resp3":"El que circule en sentido descendiente",
+"respCorrecta":"El que circule en sentido ascendiente"
+},
+
+{
+"pregunta":"A causa de la estrechez de la calzada, el cambio de sentido no se puede hacer con un solo giro. ¿Qué está obligado a hacer el conductor?",
+"resp1":"Esperar hasta que no haya tráfico para hacer el cambio de sentido.",
+"resp2":"Hacer el cambio de sentido con el menos número posible de maniobras.",
+"resp3":"Continuar la marcha hasta que haya un lugar adecuado.",
+"respCorrecta":"Continuar la marcha hasta que haya un lugar adecuado."
+},
+
+{
+"pregunta":" ¿Qué debe tener un turismo para ser considerado como tal?",
+"resp1":"Al menos cuatro ruedas y además del asiento del conductor diez plazas como máximo",
+"resp2":"Al menos cinco ruedas y además del asiento del conductor ocho plazas como máximo",
+"resp3":"Al menos cuatro ruedas y además del asiento del conductor ocho plazas como máximo",
+"respCorrecta":"Al menos cuatro ruedas y además del asiento del conductor ocho plazas como máximo"
+},
+
+{
+"pregunta":"Tras adelantar al turismo y al camión, el conductor del turismo verde tiene la intención de adelantar al resto de vehículos. ¿Debe volver al carril derecho antes de iniciar dicho adelantamiento?",
+"resp1":"Sí, siempre.",
+"resp2":"No, porque no es obligatorio en autopistas.",
+"resp3":"Sí, pero solamente cuando los vehículos que circulen detrás suyo lo hagan a más velocidad.",
+"respCorrecta":"Sí, pero solamente cuando los vehículos que circulen detrás suyo lo hagan a más velocidad."
+},
+
+{
+"pregunta":"¿Quién tiene la responsabilidad por las infracciones cometidas sobre las normas de circulación?",
+"resp1":"Siempre el conductor causante de la infracción cometida.",
+"resp2":"El conductor y, si es menor de edad, sus padres o tutores legales, solidariamente.",
+"resp3":"El titular del vehículo.",
+"respCorrecta":"El conductor y, si es menor de edad, sus padres o tutores legales, solidariamente."
+},
+
+{
+"pregunta":"¿En qué situación se producen muchos atropellos de vehículos a peatones?",
+"resp1":"Cuando estacionen en la acera",
+"resp2":"Cuando se disponen a entrar en un garaje",
+"resp3":"Cuando circulan marcha atrás porque el conductor no ve al peatón",
+"respCorrecta":"Cuando circulan marcha atrás porque el conductor no ve al peatón"
+},
+
+{
+"pregunta":"¿Qué efecto produce en los vehículos que circulan detrás los retrovisores con forma convexa?",
+"resp1":"Los vehículos parecen mas alejados",
+"resp2":"Los vehículos parecen mas grandes",
+"resp3":"Los vehículos parecen mas cercanos",
+"respCorrecta":"Los vehículos parecen mas cercanos"
+},
+
+{
+"pregunta":"Circula con un turismo por esta autopista. ¿Qué velocidad se considera anormalmente reducida?",
+"resp1":"Menos de 60 km/hora.",
+"resp2":"Menos de 70 km/hora.",
+"resp3":"Menos de 80 km/hora.",
+"respCorrecta":"Menos de 60 km/hora."
+},
+
+{
+"pregunta":"¿Cómo es el campo visual de los niños?",
+"resp1":"Más reducido que el de los adultos.",
+"resp2":"Más amplio que el de los adultos.",
+"resp3":"El campo visual será el mismo que el de los adultos.",
+"respCorrecta":"Más reducido que el de los adultos."
+},
+
+{
+"pregunta":"¿Cuántos puntos como máximo se pueden recuperar realizando un curso de reeducación vial?",
+"resp1":"6 ptn.",
+"resp2":"3 ptn.",
+"resp3":"4 ptn.",
+"respCorrecta":"6 ptn."
+},
+
+{
+"pregunta":"¿Qué deben llevar los neumáticos adicionálmente en caso de nieve o hielo?",
+"resp1":"Chinchetas especiales para coche",
+"resp2":"Clavos de cantos redondeados",
+"resp3":"Clavos de cantos puntiagudos",
+"respCorrecta":"Clavos de cantos redondeados"
 }
 ]

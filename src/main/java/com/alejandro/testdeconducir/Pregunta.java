@@ -14,8 +14,16 @@ package com.alejandro.testdeconducir;
  */
 public class Pregunta {
     
-    private String pregunta,resp1,resp2,resp3;
+    private String pregunta,resp1,resp2,resp3,respCorrecta;
     //private boolean correcto = false;    
+
+    public String getRespCorrecta() {
+        return respCorrecta;
+    }
+
+    public void setRespCorrecta(String respCorrecta) {
+        this.respCorrecta = respCorrecta;
+    }
     
     public Pregunta() {
         
