@@ -1,5 +1,7 @@
 package com.alejandro.testdeconducir;
 
+import java.util.ArrayList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,15 +17,6 @@ package com.alejandro.testdeconducir;
 public class Pregunta {
     
     private String pregunta,resp1,resp2,resp3,respCorrecta;
-    //private boolean correcto = false;    
-
-    public String getRespCorrecta() {
-        return respCorrecta;
-    }
-
-    public void setRespCorrecta(String respCorrecta) {
-        this.respCorrecta = respCorrecta;
-    }
     
     public Pregunta() {
         
@@ -66,5 +59,11 @@ public class Pregunta {
     public void setResp3(String resp3) {
         this.resp3 = resp3;
     }
-    
+    public String getRespCorrecta() {
+        return respCorrecta;
+    }
+
+    public void setRespCorrecta(String respCorrecta) {
+        this.respCorrecta = respCorrecta;
+    }
 }

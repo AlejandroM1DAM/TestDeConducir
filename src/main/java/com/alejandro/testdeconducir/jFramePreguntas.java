@@ -3,9 +3,8 @@ package com.alejandro.testdeconducir;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
-import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -21,13 +20,19 @@ import java.util.Random;
  */
 public class jFramePreguntas extends javax.swing.JFrame {
     private Random rnd = new Random();
-    private String nombreArchivo = "Hola";
     private ArrayList<Pregunta> listaPreguntas = new ArrayList<>();
+    private static int correctas = 0;
+    private static int falsas = 0;
+    private int num = rnd.nextInt(3);
+    private int cont = 0;
+    private static String resultado = "";
+    
     /**
      * Creates new form Preguntas
      */
     public jFramePreguntas() {
-        initComponents();
+        initComponents();        
+        txtCorrecta.setVisible(false);
     }
 
     /**
@@ -47,13 +52,7 @@ public class jFramePreguntas extends javax.swing.JFrame {
         txtCorrecta = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        addHierarchyBoundsListener(new java.awt.event.HierarchyBoundsListener() {
-            public void ancestorMoved(java.awt.event.HierarchyEvent evt) {
-                formAncestorMoved(evt);
-            }
-            public void ancestorResized(java.awt.event.HierarchyEvent evt) {
-            }
-        });
+        setSize(new java.awt.Dimension(50, 50));
 
         jLabel1.setText("Test Clase B: Coches");
 
@@ -78,6 +77,11 @@ public class jFramePreguntas extends javax.swing.JFrame {
         btnAnterior.setText("Anterior");
 
         btnSiguiente.setText("Siguiente");
+        btnSiguiente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSiguienteActionPerformed(evt);
+            }
+        });
 
         txtPregunta.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
@@ -98,7 +102,7 @@ public class jFramePreguntas extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnAnterior)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 313, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 304, Short.MAX_VALUE)
                         .addComponent(btnSiguiente))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -129,11 +133,11 @@ public class jFramePreguntas extends javax.swing.JFrame {
                 .addComponent(txtPregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(rbtnResp1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addComponent(rbtnResp2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(rbtnResp3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAnterior)
                     .addComponent(btnSiguiente))
@@ -146,11 +150,14 @@ public class jFramePreguntas extends javax.swing.JFrame {
     private void txtPreguntaAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_txtPreguntaAncestorAdded
         getListaPreguntas();
         txtPregunta.setText(listaPreguntas.get(0).getPregunta());
+        num = rnd.nextInt(3);
         rbtnResp1.setText(listaPreguntas.get(0).getRespuesta1());
         rbtnResp2.setText(listaPreguntas.get(0).getRespuesta2());
         rbtnResp3.setText(listaPreguntas.get(0).getRespuesta3());
-        txtCorrecta.setVisible(false);
         txtCorrecta.setText(listaPreguntas.get(0).getRespCorrecta());
+        cont++; 
+        
+        
     }//GEN-LAST:event_txtPreguntaAncestorAdded
 
     private void rbtnResp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnResp1ActionPerformed
@@ -174,9 +181,55 @@ public class jFramePreguntas extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_rbtnResp3ActionPerformed
 
-    private void formAncestorMoved(java.awt.event.HierarchyEvent evt) {//GEN-FIRST:event_formAncestorMoved
+    private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
         
-    }//GEN-LAST:event_formAncestorMoved
+        if(cont == 3) {
+              if(rbtnResp1.isSelected()) {
+                if(rbtnResp1.getText().equals(txtCorrecta.getText())) {
+                    correctas++; 
+                }              
+                else {
+                    falsas++;
+                }
+
+            }else if(rbtnResp2.isSelected()) {
+                if(rbtnResp2.getText().equals(txtCorrecta.getText())) {
+                    correctas++; 
+                }             
+                else {
+                    falsas++;
+                }           
+            }else if(rbtnResp3.isSelected()) {
+                if(rbtnResp3.getText().equals(txtCorrecta.getText())) {
+                    correctas++;              
+                }
+                else {
+                    falsas++;     
+                }       
+            }else {       
+                falsas++; 
+            }
+
+            System.out.println("Correctas: " + correctas + ", Falsas: " + falsas);
+            rbtnResp1.setSelected(false);
+            rbtnResp2.setSelected(false);
+            rbtnResp3.setSelected(false);
+            
+            txtPregunta.setText(listaPreguntas.get(cont).getPregunta());
+            rbtnResp1.setText(listaPreguntas.get(cont).getRespuesta1());
+            rbtnResp2.setText(listaPreguntas.get(cont).getRespuesta2());
+            rbtnResp3.setText(listaPreguntas.get(cont).getRespuesta3());
+            txtCorrecta.setText(listaPreguntas.get(cont).getRespCorrecta()); 
+            cont++;           
+        }else {            
+            this.setVisible(false);
+            Resultado abrir = new Resultado();
+            abrir.setVisible(true); 
+        }   
+        
+        
+        
+    }//GEN-LAST:event_btnSiguienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -223,13 +276,31 @@ public class jFramePreguntas extends javax.swing.JFrame {
             List<Pregunta> preg = objectMapper.readValue(file, new TypeReference<List<Pregunta>>() { });
 
             preg.forEach(x-> listaPreguntas.add(x));
+            Collections.shuffle(this.listaPreguntas);
 
         } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
     
-
+    public static String getCorrectas() {
+        return correctas + "";
+    }
+    
+    public static String getFalsas() {
+        return falsas + "";
+    }
+    
+    public static String getResultado() {  
+        System.out.println("Correctas: " + correctas + ", Falsas: " + falsas);
+        if (correctas >= 2 && falsas <= 0) {
+             resultado = "Aprobado";
+        }else {        
+             resultado = "Suspenso";
+        }
+        return resultado;
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAnterior;
     private javax.swing.JButton btnSiguiente;
@@ -240,4 +311,6 @@ public class jFramePreguntas extends javax.swing.JFrame {
     private javax.swing.JLabel txtCorrecta;
     private javax.swing.JLabel txtPregunta;
     // End of variables declaration//GEN-END:variables
+
+    
 }

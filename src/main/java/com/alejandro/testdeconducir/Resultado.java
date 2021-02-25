@@ -5,17 +5,26 @@
  */
 package com.alejandro.testdeconducir;
 
+import com.alejandro.testdeconducir.jFramePreguntas;
+
 /**
  *
  * @author Alejandro
  */
 public class Resultado extends javax.swing.JFrame {
-
+      
     /**
      * Creates new form Resultado
      */
     public Resultado() {
         initComponents();
+        txtAcierNum.setText(jFramePreguntas.getCorrectas());
+        txtErrNum.setText(jFramePreguntas.getFalsas());
+        txtResultado.setText(jFramePreguntas.getResultado());
+        
+        System.out.println();
+        System.out.println();
+        System.out.println();
     }
 
     /**
@@ -26,31 +35,126 @@ public class Resultado extends javax.swing.JFrame {
     private void initComponents() {
 
         txtTitulo = new javax.swing.JLabel();
+        txtAciertos = new javax.swing.JLabel();
+        txtErrores = new javax.swing.JLabel();
+        txtAcierNum = new javax.swing.JLabel();
+        txtErrNum = new javax.swing.JLabel();
+        txtResultado = new javax.swing.JLabel();
+        btnVueltaInicio = new javax.swing.JButton();
+        btnReset = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        txtTitulo.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         txtTitulo.setText("El examen ha terminado.");
+
+        txtAciertos.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        txtAciertos.setText("Aciertos: ");
+
+        txtErrores.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        txtErrores.setText("Errores: ");
+
+        txtAcierNum.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+
+        txtErrNum.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+
+        btnVueltaInicio.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnVueltaInicio.setText("Volver al inicio");
+        btnVueltaInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVueltaInicioActionPerformed(evt);
+            }
+        });
+
+        btnReset.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnReset.setText("Reintentar este test");
+        btnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResetActionPerformed(evt);
+            }
+        });
+
+        btnSalir.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(130, Short.MAX_VALUE)
-                .addComponent(txtTitulo)
-                .addGap(127, 127, 127))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnReset)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnSalir)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnVueltaInicio))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(92, 92, 92)
+                        .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(txtErrores)
+                            .addGap(18, 18, 18)
+                            .addComponent(txtErrNum, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(txtAciertos)
+                            .addGap(18, 18, 18)
+                            .addComponent(txtAcierNum, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(95, 95, 95)
+                        .addComponent(txtTitulo)))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(40, 40, 40)
                 .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(255, Short.MAX_VALUE))
+                .addGap(44, 44, 44)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtAcierNum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtAciertos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtErrores)
+                    .addComponent(txtErrNum, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnReset)
+                    .addComponent(btnSalir)
+                    .addComponent(btnVueltaInicio))
+                .addGap(40, 40, 40))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
+        jFramePreguntas abrir = new jFramePreguntas();
+        abrir.setVisible(true);                                     
+        this.dispose();
+    }//GEN-LAST:event_btnResetActionPerformed
+
+    private void btnVueltaInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVueltaInicioActionPerformed
+        JFrame_ppal abrir = new JFrame_ppal();
+        abrir.setVisible(true);                                     
+        this.dispose();
+    }//GEN-LAST:event_btnVueltaInicioActionPerformed
+    
     /**
      * @param args the command line arguments
      */
@@ -85,8 +189,19 @@ public class Resultado extends javax.swing.JFrame {
             }
         });
     }
+    
+    
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnReset;
+    private javax.swing.JButton btnSalir;
+    private javax.swing.JButton btnVueltaInicio;
+    private javax.swing.JLabel txtAcierNum;
+    private javax.swing.JLabel txtAciertos;
+    private javax.swing.JLabel txtErrNum;
+    private javax.swing.JLabel txtErrores;
+    private javax.swing.JLabel txtResultado;
     private javax.swing.JLabel txtTitulo;
     // End of variables declaration//GEN-END:variables
 }
