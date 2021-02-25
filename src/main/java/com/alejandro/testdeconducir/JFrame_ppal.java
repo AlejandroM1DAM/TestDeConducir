@@ -21,7 +21,7 @@ public class JFrame_ppal extends javax.swing.JFrame {
         jLabel1.setText("Clase C");
         jLabel3.setText("    - 20 preguntas.");
         jLabel4.setText("    - Máximo 3 fallos.");
-        jLabel2.setIcon(new ImageIcon("C:\\Users\\Alejandro\\Documents\\NetBeansProjects\\TestDeConducir\\ImgResult\\coche.png"));
+        jLabel2.setIcon(new ImageIcon("ImgResult\\coche.png"));
     }
 
     /**
