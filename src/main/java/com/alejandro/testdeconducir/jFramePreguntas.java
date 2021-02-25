@@ -6,7 +6,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,12 +18,10 @@ import java.util.Random;
  * @author Alejandro
  */
 public class jFramePreguntas extends javax.swing.JFrame {
-    private Random rnd = new Random();
     private ArrayList<Pregunta> listaPreguntas = new ArrayList<>();
     private static int correctas = 0;
     private static int falsas = 0;
-    private int num = rnd.nextInt(3);
-    private int cont = 0;
+    private int cont = 1;
     private static String resultado = "";
     
     /**
@@ -54,28 +51,39 @@ public class jFramePreguntas extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(50, 50));
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Test Clase B: Coches");
 
+        rbtnResp1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         rbtnResp1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rbtnResp1ActionPerformed(evt);
             }
         });
 
+        rbtnResp2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         rbtnResp2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rbtnResp2ActionPerformed(evt);
             }
         });
 
+        rbtnResp3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         rbtnResp3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rbtnResp3ActionPerformed(evt);
             }
         });
 
+        btnAnterior.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnAnterior.setText("Anterior");
+        btnAnterior.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAnteriorActionPerformed(evt);
+            }
+        });
 
+        btnSiguiente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnSiguiente.setText("Siguiente");
         btnSiguiente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,6 +91,7 @@ public class jFramePreguntas extends javax.swing.JFrame {
             }
         });
 
+        txtPregunta.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtPregunta.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -97,29 +106,23 @@ public class jFramePreguntas extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnAnterior)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 304, Short.MAX_VALUE)
-                        .addComponent(btnSiguiente))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(txtPregunta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(rbtnResp3)
-                                    .addComponent(rbtnResp2, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
-                                    .addComponent(rbtnResp1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
             .addComponent(txtCorrecta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(txtPregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 926, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(rbtnResp3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(rbtnResp2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnAnterior)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnSiguiente))
+                    .addComponent(rbtnResp1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(70, 70, 70))
             .addGroup(layout.createSequentialGroup()
-                .addGap(176, 176, 176)
+                .addGap(393, 393, 393)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -127,21 +130,21 @@ public class jFramePreguntas extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(txtCorrecta, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(1, 1, 1)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtPregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtPregunta, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(rbtnResp1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(rbtnResp2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(rbtnResp3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAnterior)
                     .addComponent(btnSiguiente))
-                .addContainerGap())
+                .addGap(41, 41, 41))
         );
 
         pack();
@@ -150,12 +153,10 @@ public class jFramePreguntas extends javax.swing.JFrame {
     private void txtPreguntaAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_txtPreguntaAncestorAdded
         getListaPreguntas();
         txtPregunta.setText(listaPreguntas.get(0).getPregunta());
-        num = rnd.nextInt(3);
         rbtnResp1.setText(listaPreguntas.get(0).getRespuesta1());
         rbtnResp2.setText(listaPreguntas.get(0).getRespuesta2());
         rbtnResp3.setText(listaPreguntas.get(0).getRespuesta3());
         txtCorrecta.setText(listaPreguntas.get(0).getRespCorrecta());
-        cont++; 
         
         
     }//GEN-LAST:event_txtPreguntaAncestorAdded
@@ -183,7 +184,7 @@ public class jFramePreguntas extends javax.swing.JFrame {
 
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
         
-        if(cont == 3) {
+        if(correctas + falsas < 20) {
               if(rbtnResp1.isSelected()) {
                 if(rbtnResp1.getText().equals(txtCorrecta.getText())) {
                     correctas++; 
@@ -210,7 +211,6 @@ public class jFramePreguntas extends javax.swing.JFrame {
                 falsas++; 
             }
 
-            System.out.println("Correctas: " + correctas + ", Falsas: " + falsas);
             rbtnResp1.setSelected(false);
             rbtnResp2.setSelected(false);
             rbtnResp3.setSelected(false);
@@ -222,14 +222,33 @@ public class jFramePreguntas extends javax.swing.JFrame {
             txtCorrecta.setText(listaPreguntas.get(cont).getRespCorrecta()); 
             cont++;           
         }else {            
-            this.setVisible(false);
             Resultado abrir = new Resultado();
-            abrir.setVisible(true); 
+            abrir.setVisible(true);             
+            this.dispose();
+            cont = 1;
+            correctas = 0;
+            falsas = 0;
+
         }   
         
         
         
     }//GEN-LAST:event_btnSiguienteActionPerformed
+
+    private void btnAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnteriorActionPerformed
+        if(cont >= 0) {
+            rbtnResp1.setSelected(false);
+            rbtnResp2.setSelected(false);
+            rbtnResp3.setSelected(false);
+            cont--;
+            txtPregunta.setText(listaPreguntas.get(cont).getPregunta());
+            rbtnResp1.setText(listaPreguntas.get(cont).getRespuesta1());
+            rbtnResp2.setText(listaPreguntas.get(cont).getRespuesta2());
+            rbtnResp3.setText(listaPreguntas.get(cont).getRespuesta3());
+            txtCorrecta.setText(listaPreguntas.get(cont).getRespCorrecta()); 
+               
+        }
+    }//GEN-LAST:event_btnAnteriorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -292,8 +311,7 @@ public class jFramePreguntas extends javax.swing.JFrame {
     }
     
     public static String getResultado() {  
-        System.out.println("Correctas: " + correctas + ", Falsas: " + falsas);
-        if (correctas >= 2 && falsas <= 0) {
+        if (correctas >= 18 && falsas <= 2) {
              resultado = "Aprobado";
         }else {        
              resultado = "Suspenso";

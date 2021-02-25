@@ -59,6 +59,8 @@ public class Resultado extends javax.swing.JFrame {
 
         txtErrNum.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
+        txtResultado.setFont(new java.awt.Font("Goudy Stout", 1, 24)); // NOI18N
+
         btnVueltaInicio.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnVueltaInicio.setText("Volver al inicio");
         btnVueltaInicio.addActionListener(new java.awt.event.ActionListener() {
@@ -88,29 +90,30 @@ public class Resultado extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnReset)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSalir)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnVueltaInicio))
+                        .addGap(40, 40, 40)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnReset)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnSalir)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnVueltaInicio))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtErrores)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtErrNum, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtAciertos)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtAcierNum, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(95, 95, 95)
+                                .addComponent(txtTitulo))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(txtErrores)
-                            .addGap(18, 18, 18)
-                            .addComponent(txtErrNum, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(txtAciertos)
-                            .addGap(18, 18, 18)
-                            .addComponent(txtAcierNum, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(95, 95, 95)
-                        .addComponent(txtTitulo)))
+                        .addGap(114, 114, 114)
+                        .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(

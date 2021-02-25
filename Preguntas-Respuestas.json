@@ -8,7 +8,7 @@
 },
 
 {
-"pregunta":"En un vehículo de más de 5 metros, destinado al transporte de mercancías, una carga de longitud indivisible puede sobresalir...",
+"pregunta":"En un vehículo de más de 5 metros, destinado al transporte de mercancías, una carga de longitud indivisible puede\n sobresalir...",
 "resp1":"2 metros por la parte delantera y 3 por la trasera.",
 "resp2":"El 15% de la longitud del vehículo por delante y por detrás.",
 "resp3":"3 metros por la parte delantera y 2 por la trasera.",
@@ -16,7 +16,7 @@
 },
 
 {
-"pregunta":"¿Debemos facilitar y ceder el paso a los vehículos que se aproximen por nuestra derecha si no existe señalización de prioridad de paso?",
+"pregunta":"¿Debemos facilitar y ceder el paso a los vehículos que se aproximen por nuestra derecha si no existe señalización\n de prioridad de paso?",
 "resp1":"No, porque los vehículos que circulan por la vía principal siempre tendrán prioridad.",
 "resp2":"Sí, de forma obligatoria.",
 "resp3":"Sí, pero solamente a los autobuses.",
@@ -40,7 +40,7 @@
 },
 
 {
-"pregunta":"¿Qué permiso de conducción será necesario para conducir automóviles destinados al transporte de personas con más de nueve asientos y menos de diecisiete (minibús por ejemplo)?",
+"pregunta":"¿Qué permiso de conducción será necesario para conducir automóviles destinados al transporte de personas con más\n  de nueve asientos y menos de diecisiete (minibús por ejemplo)?",
 "resp1":"C1+E",
 "resp2":"D1",
 "resp3":"C",
@@ -72,7 +72,7 @@
 },
 
 {
-"pregunta":"¿Qué vehículo tendrá preferencia en un tramo estrecho de gran pendiente en el que sea difícil el paso simultáneo de ambos?",
+"pregunta":"¿Qué vehículo tendrá preferencia en un tramo estrecho de gran pendiente en el que sea difícil el paso simultáneo de\n  ambos?",
 "resp1":"El vehículo más estrecho",
 "resp2":"El que circule en sentido ascendente",
 "resp3":"El que circule en sentido descendiente",
@@ -80,7 +80,7 @@
 },
 
 {
-"pregunta":"A causa de la estrechez de la calzada, el cambio de sentido no se puede hacer con un solo giro. ¿Qué está obligado a hacer el conductor?",
+"pregunta":"A causa de la estrechez de la calzada, el cambio de sentido no se puede hacer con un solo giro. ¿Qué está obligado\n a hacer el conductor?",
 "resp1":"Esperar hasta que no haya tráfico para hacer el cambio de sentido.",
 "resp2":"Hacer el cambio de sentido con el menos número posible de maniobras.",
 "resp3":"Continuar la marcha hasta que haya un lugar adecuado.",
@@ -96,7 +96,7 @@
 },
 
 {
-"pregunta":"Tras adelantar al turismo y al camión, el conductor del turismo verde tiene la intención de adelantar al resto de vehículos. ¿Debe volver al carril derecho antes de iniciar dicho adelantamiento?",
+"pregunta":"Tras adelantar al turismo y al camión, el conductor del turismo verde tiene la intención de adelantar al resto de\n vehículos. ¿Debe volver al carril derecho antes de iniciar dicho adelantamiento?",
 "resp1":"Sí, siempre.",
 "resp2":"No, porque no es obligatorio en autopistas.",
 "resp3":"Sí, pero solamente cuando los vehículos que circulen detrás suyo lo hagan a más velocidad.",

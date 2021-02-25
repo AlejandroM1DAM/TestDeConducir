@@ -1,6 +1,7 @@
 package com.alejandro.testdeconducir;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 public class Pregunta {
     
     private String pregunta,resp1,resp2,resp3,respCorrecta;
+    private static ArrayList<String> respuestas = new ArrayList<>();
     
     public Pregunta() {
         
@@ -26,6 +28,18 @@ public class Pregunta {
         this.resp1 = resp1;
         this.resp2 = resp2;
         this.resp3 = resp3;
+        this.respuestas.add(resp1);
+        this.respuestas.add(resp2);
+        this.respuestas.add(resp3);
+    }
+
+    public static ArrayList<String> getRespuestas() {        
+        Collections.shuffle(respuestas);
+        return respuestas;
+    }
+
+    public void setRespuestas(ArrayList<String> respuestas) {
+        this.respuestas = respuestas;
     }
     
     public String getPregunta() {
